@@ -8,12 +8,22 @@ function App() {
 
   const publications = [
     {
+      title: "Seeing Beneath the Surface: A Loss Function Ablation Study for Depth-Aware Shallow-Water Bathymetry",
+      authors: "Hsu, H.-J., & Moortgat, J.",
+      journal: "Submitted to Int. Archives of Photogrammetry, Remote Sensing & Spatial Information Sciences (45th EARSeL Symposium)",
+      year: 2026,
+      volume: "under review",
+      doi: "",
+      status: "under-review",
+    },
+    {
       title: "A novel approach to automated cloud removal and seamless multisensor satellite image mosaicking",
       authors: "Hsu, H.-J., Tseng, K.-H., Tsai, F., Liu, C.-L., Lo, C.-C., & Moortgat, J.",
       journal: "Applied Computing and Geosciences",
       year: 2026,
       volume: "31, 100387",
       doi: "https://doi.org/10.1016/j.acags.2026.100387",
+      status: "published",
     },
     {
       title: "From Local Training to Large-Scale Mapping: A Comparative Assessment of Machine Learning and Deep Learning for Transferable Satellite-Derived Bathymetry",
@@ -22,6 +32,7 @@ function App() {
       year: 2026,
       volume: "18(11), 1768",
       doi: "https://doi.org/10.3390/rs18111768",
+      status: "published",
     },
     {
       title: "From Bands to Depth: Understanding Bathymetry Decisions on Sentinel-2",
@@ -30,6 +41,7 @@ function App() {
       year: 2026,
       volume: "arXiv:2601.12636",
       doi: "https://arxiv.org/abs/2601.12636",
+      status: "preprint",
     },
     {
       title: "A semi-empirical scheme for bathymetric mapping in shallow water by ICESat-2 and Sentinel-2: A case study in the South China Sea",
@@ -38,6 +50,7 @@ function App() {
       year: 2021,
       volume: "178, 1-19",
       doi: "https://doi.org/10.1016/j.isprsjprs.2021.05.012",
+      status: "published",
     },
   ]
 
@@ -55,18 +68,21 @@ function App() {
   ]
 
   const education = [
-    { degree: "Ph.D. Candidate", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2024 - Present", advisor: "Advisor: Prof. Joachim Moortgat" },
+    { degree: "Ph.D. Candidate", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2023 - Present", advisor: "Advisor: Prof. Joachim Moortgat | Candidacy passed May 2024 | GPA 3.92/4.0 | Expected: Spring 2028" },
     { degree: "M.Sc.", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2023 - 2024", advisor: "" },
     { degree: "M.Sc.", field: "Civil Engineering", institution: "National Central University", location: "Taiwan", period: "2019 - 2020", advisor: "Thesis: Bathymetric Mapping in Shallow Water of the South China Sea" },
     { degree: "B.Arts", field: "Geography", institution: "National Taiwan Normal University", location: "Taiwan", period: "2013 - 2017", advisor: "" },
   ]
 
   const awards = [
+    { name: "Friends of Orton Hall Fund Travel Awards", detail: "Competitive, faculty-reviewed; seven international conferences, School of Earth Sciences, OSU", year: "2024-2026" },
     { name: "Michael Johnson Graduate Student Award", detail: "Outstanding PhD candidate starting research, OSU", year: "2026" },
     { name: "School of Earth Sciences Geodetic Science Book Award", detail: "The Ohio State University", year: "2024" },
     { name: "Honorable Mention, MATLAB/Simulink Call for Papers", detail: "Taiwan", year: "2020" },
     { name: "Graduate Seminar Poster Award", detail: "Center for Space and Remote Sensing, NCU", year: "2019" },
+    { name: "Commendation for Cross-Strait Groundwater & Engineering Geology Symposium", detail: "NCU, Taiwan", year: "2018" },
     { name: "Academic Excellence Award (Dean's List)", detail: "Top 3 in Department, NTNU (3 times)", year: "2013-2017" },
+    { name: "Honorable Mention, Hand-Drawn Maps Competition", detail: "NTNU, Taiwan", year: "2017" },
   ]
 
   const skills = [
@@ -130,7 +146,7 @@ function App() {
         {/* METRICS */}
         <div className="metrics-bar">
           <div className="metric-item">
-            <span className="metric-value">4</span>
+            <span className="metric-value">5</span>
             <span className="metric-label">Publications</span>
           </div>
           <div className="metric-item">
@@ -228,7 +244,7 @@ function App() {
             <div className="research-card">
               <div className="research-icon">&#127760;</div>
               <h3>Global Shallow-Water Mapping</h3>
-              <p>Cross-region transfer benchmarking from Pratas Island and Great Barrier Reef to Ashmore and Cartier Reef, analyzing depth-dependent degradation and failure modes.</p>
+              <p>Built a standardized multi-region training dataset (~68,000 Sentinel-2 patches, up to 30 acquisitions each, 2019-2025; U.S., New Zealand, Taiwan, Australia) with IHO S-44-based quality criteria. Cross-region transfer benchmarking analyzing depth-dependent degradation.</p>
               <div className="research-tags">
                 <span className="tag">Transfer Learning</span>
                 <span className="tag">ICESat-2</span>
@@ -269,9 +285,14 @@ function App() {
               <div key={index} className="pub-item">
                 <div className="pub-year">{pub.year}</div>
                 <div className="pub-content">
-                  <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-title">{pub.title}</a>
+                  {pub.doi ? (
+                    <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-title">{pub.title}</a>
+                  ) : (
+                    <span className="pub-title">{pub.title}</span>
+                  )}
                   <p className="pub-authors">{pub.authors}</p>
-                  <p className="pub-journal"><em>{pub.journal}</em>, {pub.volume}</p>
+                  <p className="pub-journal"><em>{pub.journal}</em>{pub.volume !== "under review" ? `, ${pub.volume}` : ''}</p>
+                  {pub.status !== "published" && <span className={`pub-badge pub-badge-${pub.status}`}>{pub.status === "under-review" ? "Under Review" : "Preprint"}</span>}
                 </div>
               </div>
             ))}
@@ -318,7 +339,7 @@ function App() {
                 <span className="exp-date">2024 - 2025</span>
               </div>
               <p className="exp-org">Division of Geodetic Science, The Ohio State University</p>
-              <p className="exp-detail">Courses: Climate Change Issues, Earth Science Lab</p>
+              <p className="exp-detail">Courses: EEOB 2911 The Climate Crisis (Autumn 2024), Earth Science Lab (Spring & Summer 2025)</p>
             </div>
             <div className="exp-item">
               <div className="exp-header">
@@ -369,6 +390,25 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* PROFESSIONAL MEMBERSHIPS */}
+        <section id="memberships">
+          <h2 className="section-title">Professional Memberships</h2>
+          <div className="memberships-list">
+            <div className="membership-item">
+              <strong>American Geophysical Union (AGU)</strong>
+              <span className="membership-period">2024 - present</span>
+            </div>
+            <div className="membership-item">
+              <strong>American Association for the Advancement of Science (AAAS)</strong>
+              <span className="membership-period">2025 - present</span>
+            </div>
+            <div className="membership-item">
+              <strong>European Geosciences Union (EGU)</strong>
+              <span className="membership-period">2025</span>
+            </div>
           </div>
         </section>
 
