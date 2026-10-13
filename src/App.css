@@ -241,6 +241,17 @@ section {
   color: var(--primary) !important;
 }
 
+.btn-cv {
+  background: var(--accent);
+  color: #fff !important;
+  border: 1px solid var(--accent);
+}
+
+.btn-cv:hover {
+  opacity: 0.9;
+  color: #fff !important;
+}
+
 .hero-image {
   flex-shrink: 0;
   width: 220px;
@@ -286,6 +297,72 @@ section {
   font-weight: 600;
   letter-spacing: 0.8px;
   color: var(--text-secondary);
+}
+
+/* ===== CV VIEWER ===== */
+.cv-viewer-wrapper {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.cv-viewer-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.2rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-viewer-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.cv-viewer-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cv-btn {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--text) !important;
+  background: var(--bg-card);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.cv-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary) !important;
+}
+
+.cv-btn-download {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff !important;
+}
+
+.cv-btn-download:hover {
+  opacity: 0.9;
+  color: #fff !important;
+}
+
+.cv-viewer {
+  height: 800px;
+  background: var(--bg-alt);
+}
+
+.cv-viewer iframe {
+  display: block;
 }
 
 /* ===== NEWS ===== */
@@ -1132,6 +1209,16 @@ footer {
   .contact-info {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .cv-viewer {
+    height: 500px;
+  }
+
+  .cv-viewer-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
   }
 
   .map-layout {
