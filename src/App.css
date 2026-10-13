@@ -376,6 +376,14 @@ section {
   margin-top: 0.4rem;
 }
 
+.edu-extra {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--primary);
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
 /* ===== RESEARCH ===== */
 .research-grid {
   display: grid;
@@ -656,6 +664,40 @@ section {
   color: #2980b9;
 }
 
+.pub-badge-conference {
+  background: rgba(142, 68, 173, 0.15);
+  color: #8e44ad;
+}
+
+.pub-badge-in-prep {
+  background: rgba(149, 165, 166, 0.2);
+  color: #7f8c8d;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.pub-code-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--primary-light);
+  color: var(--primary) !important;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.pub-code-link:hover {
+  background: var(--primary);
+  color: #fff !important;
+}
+
 .scholar-link {
   margin-top: 2rem;
 }
@@ -845,8 +887,20 @@ section {
   background: var(--bg-card);
 }
 
+.membership-item {
+  flex-wrap: wrap;
+}
+
 .membership-item strong {
   font-size: 0.92rem;
+}
+
+.membership-detail {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  flex-basis: 100%;
+  margin-top: 0.2rem;
 }
 
 .membership-period {
