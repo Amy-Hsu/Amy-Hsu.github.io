@@ -162,6 +162,7 @@ function App() {
               and <strong>open-source geospatial tools</strong>.
             </p>
             <div className="hero-links">
+              <a href="/Hsu_CV.pdf" download className="btn btn-cv">Download CV (PDF)</a>
               <a href="mailto:hsu.771@osu.edu" className="btn btn-primary">hsu.771@osu.edu</a>
               <a href="https://scholar.google.com/citations?hl=zh-TW&user=u64OXEUAAAAJ" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Google Scholar</a>
               <a href="https://github.com/Amy-Hsu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">GitHub</a>
@@ -192,6 +193,29 @@ function App() {
             <span className="metric-label">Countries</span>
           </div>
         </div>
+
+        {/* CV VIEWER */}
+        <section id="cv">
+          <h2 className="section-title">Curriculum Vitae</h2>
+          <div className="cv-viewer-wrapper">
+            <div className="cv-viewer-toolbar">
+              <span className="cv-viewer-label">Hsu_CV.pdf</span>
+              <div className="cv-viewer-actions">
+                <a href="/Hsu_CV.pdf" target="_blank" rel="noopener noreferrer" className="cv-btn">Open in New Tab</a>
+                <a href="/Hsu_CV.pdf" download className="cv-btn cv-btn-download">Download PDF</a>
+              </div>
+            </div>
+            <div className="cv-viewer">
+              <iframe
+                src="/Hsu_CV.pdf"
+                title="Curriculum Vitae"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+              />
+            </div>
+          </div>
+        </section>
 
         {/* NEWS */}
         <section id="news">
