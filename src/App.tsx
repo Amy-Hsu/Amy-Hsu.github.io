@@ -8,13 +8,14 @@ function App() {
 
   const publications = [
     {
-      title: "Seeing Beneath the Surface: A Loss Function Ablation Study for Depth-Aware Shallow-Water Bathymetry",
+      title: "From local training to large-scale mapping: A comparative assessment of machine learning and deep learning for transferable satellite-derived bathymetry",
       authors: "Hsu, H.-J., & Moortgat, J.",
-      journal: "Submitted to Int. Archives of Photogrammetry, Remote Sensing & Spatial Information Sciences (45th EARSeL Symposium)",
+      journal: "Remote Sensing",
       year: 2026,
-      volume: "under review",
-      doi: "",
-      status: "under-review",
+      volume: "18(11), 1768",
+      doi: "https://doi.org/10.3390/rs18111768",
+      status: "published",
+      code: "https://github.com/buckai-observatory/DL_bathy",
     },
     {
       title: "A novel approach to automated cloud removal and seamless multisensor satellite image mosaicking",
@@ -24,24 +25,7 @@ function App() {
       volume: "31, 100387",
       doi: "https://doi.org/10.1016/j.acags.2026.100387",
       status: "published",
-    },
-    {
-      title: "From Local Training to Large-Scale Mapping: A Comparative Assessment of Machine Learning and Deep Learning for Transferable Satellite-Derived Bathymetry",
-      authors: "Hsu, H.-J., & Moortgat, J.",
-      journal: "Remote Sensing",
-      year: 2026,
-      volume: "18(11), 1768",
-      doi: "https://doi.org/10.3390/rs18111768",
-      status: "published",
-    },
-    {
-      title: "From Bands to Depth: Understanding Bathymetry Decisions on Sentinel-2",
-      authors: "Roy Chowdhury, S., Radhakrishnan, A., Hsu, H.-J., Subramoni, H., & Moortgat, J.",
-      journal: "arXiv preprint",
-      year: 2026,
-      volume: "arXiv:2601.12636",
-      doi: "https://arxiv.org/abs/2601.12636",
-      status: "preprint",
+      code: "",
     },
     {
       title: "A semi-empirical scheme for bathymetric mapping in shallow water by ICESat-2 and Sentinel-2: A case study in the South China Sea",
@@ -51,6 +35,47 @@ function App() {
       volume: "178, 1-19",
       doi: "https://doi.org/10.1016/j.isprsjprs.2021.05.012",
       status: "published",
+      code: "",
+    },
+    {
+      title: "geoai-datacubes: AI-ready multi-mission satellite data cubes for Earth-observation machine learning",
+      authors: "Moortgat, J., Jain, B., Radhakrishnan, A., Roy Chowdhury, S., & Hsu, H.-J.",
+      journal: "Journal of Open Source Software",
+      year: 2026,
+      volume: "",
+      doi: "https://doi.org/10.5281/zenodo.20829119",
+      status: "under-review",
+      code: "https://github.com/buckai-observatory/geoai-datacubes",
+    },
+    {
+      title: "Seeing beneath the surface: A loss function ablation study for depth-aware shallow-water bathymetry",
+      authors: "Hsu, H.-J., & Moortgat, J.",
+      journal: "Int. Archives of Photogrammetry, Remote Sensing & Spatial Information Sciences (45th EARSeL Symposium)",
+      year: 2026,
+      volume: "",
+      doi: "",
+      status: "under-review",
+      code: "",
+    },
+    {
+      title: "From bands to depth: Understanding bathymetry decisions on Sentinel-2",
+      authors: "Roy Chowdhury, S., Radhakrishnan, A., Hsu, H.-J., Subramoni, H., & Moortgat, J.",
+      journal: "2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      year: 2026,
+      volume: "pp. 2063-2072",
+      doi: "https://arxiv.org/abs/2601.12636",
+      status: "conference",
+      code: "",
+    },
+    {
+      title: "Open-source deep-learning pipeline for transferable satellite-derived bathymetry (DL_bathy)",
+      authors: "Hsu, H.-J., & Moortgat, J.",
+      journal: "Journal of Open Source Software",
+      year: 2026,
+      volume: "",
+      doi: "",
+      status: "in-prep",
+      code: "",
     },
   ]
 
@@ -68,28 +93,31 @@ function App() {
   ]
 
   const education = [
-    { degree: "Ph.D. Candidate", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2023 - Present", advisor: "Advisor: Prof. Joachim Moortgat | Candidacy passed May 2024 | GPA 3.92/4.0 | Expected: Spring 2028" },
-    { degree: "M.Sc.", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2023 - 2024", advisor: "" },
-    { degree: "M.Sc.", field: "Civil Engineering", institution: "National Central University", location: "Taiwan", period: "2019 - 2020", advisor: "Thesis: Bathymetric Mapping in Shallow Water of the South China Sea" },
-    { degree: "B.Arts", field: "Geography", institution: "National Taiwan Normal University", location: "Taiwan", period: "2013 - 2017", advisor: "" },
+    { degree: "Ph.D.", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2023 - Present", advisor: "Advisor: Prof. Joachim Moortgat | Candidacy passed May 2024 | GPA 3.92/4.00 | Expected: Spring 2028", extra: "Dissertation: Trustworthy Depth Maps from Space: Physics-Informed, Explainable AI for Shallow-Water Bathymetry" },
+    { degree: "M.S.", field: "Geodetic Science", institution: "The Ohio State University", location: "Columbus, OH, USA", period: "2024", advisor: "Awarded after passing the PhD candidacy examination (December 2024)", extra: "" },
+    { degree: "M.Sc.", field: "Civil Engineering (Geoinformatics)", institution: "National Central University", location: "Taiwan", period: "2019 - 2020", advisor: "Thesis: Bathymetric Mapping in Shallow Water of the South China Sea by ICESat-2 and Sentinel-2", extra: "GPA 4.00/4.00 | Rank 3/90" },
+    { degree: "B.A.", field: "Geography (with Teacher Certification)", institution: "National Taiwan Normal University", location: "Taiwan", period: "2013 - 2017", advisor: "", extra: "GPA 4.15/4.30 | Rank 1/77" },
   ]
 
   const awards = [
-    { name: "Friends of Orton Hall Fund Travel Awards", detail: "Competitive, faculty-reviewed; seven international conferences, School of Earth Sciences, OSU", year: "2024-2026" },
-    { name: "Michael Johnson Graduate Student Award", detail: "Outstanding PhD candidate starting research, OSU", year: "2026" },
-    { name: "School of Earth Sciences Geodetic Science Book Award", detail: "The Ohio State University", year: "2024" },
+    { name: "Michael Johnson Graduate Student Award", detail: "Outstanding PhD candidate starting research, School of Earth Sciences, OSU", year: "2026" },
+    { name: "AAAS Section E (Geology and Geography) Student Travel Award", detail: "Awarded twice", year: "2024, 2025" },
+    { name: "Friends of Orton Hall Fund Travel Awards", detail: "Competitive; seven international meetings, School of Earth Sciences, OSU", year: "2024-2026" },
+    { name: "Geodetic Science Book Award", detail: "School of Earth Sciences, OSU", year: "2024" },
     { name: "Honorable Mention, MATLAB/Simulink Call for Papers", detail: "Taiwan", year: "2020" },
-    { name: "Graduate Seminar Poster Award", detail: "Center for Space and Remote Sensing, NCU", year: "2019" },
-    { name: "Commendation for Cross-Strait Groundwater & Engineering Geology Symposium", detail: "NCU, Taiwan", year: "2018" },
-    { name: "Academic Excellence Award (Dean's List)", detail: "Top 3 in Department, NTNU (3 times)", year: "2013-2017" },
-    { name: "Honorable Mention, Hand-Drawn Maps Competition", detail: "NTNU, Taiwan", year: "2017" },
+    { name: "Graduate Seminar Poster Award", detail: "Center for Space and Remote Sensing Research, NCU", year: "2019" },
+    { name: "Commendation for organizing the Cross-Strait Groundwater and Engineering Geology Symposium", detail: "NCU", year: "2018" },
+    { name: "Academic Excellence Award (Dean's List)", detail: "Top 3 in Department; three times, NTNU", year: "2013-2017" },
+    { name: "Honorable Mention, Hand-Drawn Maps Competition", detail: "NTNU", year: "2017" },
+    { name: "Scholarships for Excellent Students", detail: "Hong-Lin Wu Memorial, Qing Zong Foundation, Chiefsun Foundation, and Lungshan Temple Foundation (4 times)", year: "2015-2016" },
   ]
 
   const skills = [
-    { category: "Deep Learning", items: ["PyTorch", "TensorFlow", "Physics-Informed Neural Networks", "U-Net / DeepLabV3+", "Transfer Learning"] },
-    { category: "Remote Sensing", items: ["Sentinel-2", "ICESat-2", "FORMOSAT-5", "SPOT 6/7", "Airborne LiDAR"] },
-    { category: "GIS & Geodesy", items: ["QGIS", "ArcGIS", "GDAL", "GMT", "Vertical Datum Transformations"] },
-    { category: "Programming", items: ["Python", "MATLAB", "Bash/Shell", "R", "HPC (Slurm)"] },
+    { category: "Programming", items: ["Python (PyTorch, rasterio, GDAL, xarray, Zarr)", "MATLAB", "Slurm/HPC", "Docker", "Git"] },
+    { category: "Machine Learning", items: ["U-Net", "DeepLabV3+", "ResNet", "EfficientNet", "ConvNeXt", "Random Forests", "Physics-Informed & Explainable DL"] },
+    { category: "Remote Sensing", items: ["Sentinel-2", "Landsat", "SPOT 6/7", "FORMOSAT-2/5", "ICESat-2 ATLAS", "Airborne LiDAR", "Google Earth Engine", "SNAP", "ERDAS Imagine"] },
+    { category: "GIS & Tools", items: ["QGIS", "ArcGIS", "GMT", "Vertical Datum Transformations"] },
+    { category: "Languages", items: ["Mandarin Chinese (native)", "English (fluent)"] },
   ]
 
   return (
@@ -128,16 +156,18 @@ function App() {
             <h1>Hsiao-Jou (Amy) Hsu</h1>
             <p className="hero-subtitle">Division of Geodetic Science | School of Earth Sciences<br />The Ohio State University</p>
             <p className="hero-bio">
-              I develop <strong>physics-informed deep learning</strong> models for <strong>satellite-derived bathymetry</strong>,
-              integrating Sentinel-2 multispectral imagery and ICESat-2 altimetry to map shallow-water seafloors globally.
-              My research bridges <strong>geodesy</strong>, <strong>remote sensing</strong>, and <strong>AI</strong> to deliver
-              scalable, transferable solutions for coastal oceanography and environmental monitoring.
+              My research focuses on <strong>physics-informed and explainable AI</strong> for Earth observation, especially
+              <strong>satellite-derived shallow-water bathymetry</strong> using models that transfer to unseen regions.
+              I work on quality control of heterogeneous reference data, satellite image processing (cloud removal, mosaicking),
+              and <strong>open-source geospatial tools</strong>.
             </p>
             <div className="hero-links">
               <a href="mailto:hsu.771@osu.edu" className="btn btn-primary">hsu.771@osu.edu</a>
               <a href="https://scholar.google.com/citations?hl=zh-TW&user=u64OXEUAAAAJ" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Google Scholar</a>
-              <a href="https://github.com/amy-hsu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">GitHub</a>
+              <a href="https://github.com/Amy-Hsu" target="_blank" rel="noopener noreferrer" className="btn btn-outline">GitHub</a>
               <a href="https://earthsciences.osu.edu/people/hsu.771" target="_blank" rel="noopener noreferrer" className="btn btn-outline">OSU Profile</a>
+              <a href="https://orcid.org/0009-0008-5863-3229" target="_blank" rel="noopener noreferrer" className="btn btn-outline">ORCID</a>
+              <a href="https://www.linkedin.com/in/hsiao-jou-hsu/" target="_blank" rel="noopener noreferrer" className="btn btn-outline">LinkedIn</a>
             </div>
           </div>
           <img src="/myPhoto.jpg" alt="Hsiao-Jou (Amy) Hsu" className="hero-image" />
@@ -146,7 +176,7 @@ function App() {
         {/* METRICS */}
         <div className="metrics-bar">
           <div className="metric-item">
-            <span className="metric-value">5</span>
+            <span className="metric-value">7</span>
             <span className="metric-label">Publications</span>
           </div>
           <div className="metric-item">
@@ -190,15 +220,15 @@ function App() {
           </div>
         </section>
 
-        {/* MEDIA */}
+        {/* MEDIA & OUTREACH */}
         <section id="media">
-          <h2 className="section-title">Media</h2>
+          <h2 className="section-title">Media & Outreach</h2>
           <p className="media-intro">
             Amy is the first Ph.D. student affiliated with the <strong>BuckAI Observatory</strong>, a new center of excellence
-            in applied AI at The Ohio State University that promotes interdisciplinary research in artificial intelligence
-            and scientific discovery. She contributes to research at the intersection of AI and Earth system science.
-            In 2026, she was featured in an <strong>AGU TV segment</strong> highlighting applications of artificial
-            intelligence in Earth and environmental sciences.
+            in applied AI at The Ohio State University. She is the most senior PhD student in Prof. Moortgat's group and
+            serves as <strong>mentor and collaborator</strong> for graduate students across disciplines, including Computer Science
+            and Engineering. In 2026, she was featured in <strong>AGU TV's Thought Leadership Film Series</strong> on
+            AI in Earth and environmental sciences.
           </p>
           <div className="media-video">
             <iframe
@@ -218,10 +248,11 @@ function App() {
             {education.map((edu, i) => (
               <div key={i} className="edu-card">
                 <span className="edu-period">{edu.period}</span>
-                <h3>{edu.degree} in {edu.field}</h3>
+                <h3>{edu.degree}, {edu.field}</h3>
                 <p className="edu-institution">{edu.institution}</p>
                 <p className="edu-location">{edu.location}</p>
                 {edu.advisor && <p className="edu-advisor">{edu.advisor}</p>}
+                {edu.extra && <p className="edu-extra">{edu.extra}</p>}
               </div>
             ))}
           </div>
@@ -233,8 +264,8 @@ function App() {
           <div className="research-grid">
             <div className="research-card">
               <div className="research-icon">&#127754;</div>
-              <h3>Physics-Informed Deep Learning Bathymetry</h3>
-              <p>Developing PINNs with Beer-Lambert radiative-transfer structure for cross-region transferable satellite-derived bathymetry. Multi-head xAI architecture jointly predicting depth, attenuation, and quality gates.</p>
+              <h3>Physics-Informed & Explainable Deep Learning Bathymetry</h3>
+              <p>Developing an explainable, physics-informed neural network that predicts depth together with physically interpretable maps (light attenuation, seafloor reflectance, visibility, image quality) linked by the Beer-Lambert law.</p>
               <div className="research-tags">
                 <span className="tag">PyTorch</span>
                 <span className="tag">Sentinel-2</span>
@@ -244,7 +275,7 @@ function App() {
             <div className="research-card">
               <div className="research-icon">&#127760;</div>
               <h3>Global Shallow-Water Mapping</h3>
-              <p>Built a standardized multi-region training dataset (~68,000 Sentinel-2 patches, up to 30 acquisitions each, 2019-2025; U.S., New Zealand, Taiwan, Australia) with IHO S-44-based quality criteria. Cross-region transfer benchmarking analyzing depth-dependent degradation.</p>
+              <p>Built a standardized multi-region training dataset (~70,000 Sentinel-2 patches, up to 30 images each, 2019-2025; U.S., New Zealand, Taiwan, Australia) with automated pipeline for imagery download, vertical-datum conversion, and grid alignment. Benchmarked five ML/DL models for cross-region transfer.</p>
               <div className="research-tags">
                 <span className="tag">Transfer Learning</span>
                 <span className="tag">ICESat-2</span>
@@ -291,8 +322,15 @@ function App() {
                     <span className="pub-title">{pub.title}</span>
                   )}
                   <p className="pub-authors">{pub.authors}</p>
-                  <p className="pub-journal"><em>{pub.journal}</em>{pub.volume !== "under review" ? `, ${pub.volume}` : ''}</p>
-                  {pub.status !== "published" && <span className={`pub-badge pub-badge-${pub.status}`}>{pub.status === "under-review" ? "Under Review" : "Preprint"}</span>}
+                  <p className="pub-journal"><em>{pub.journal}</em>{pub.volume ? `, ${pub.volume}` : ''}</p>
+                  <div className="pub-meta">
+                    {pub.status !== "published" && (
+                      <span className={`pub-badge pub-badge-${pub.status}`}>
+                        {pub.status === "under-review" ? "Under Review" : pub.status === "in-prep" ? "In Preparation" : pub.status === "conference" ? "Conference Paper" : pub.status}
+                      </span>
+                    )}
+                    {pub.code && <a href={pub.code} target="_blank" rel="noopener noreferrer" className="pub-code-link">Code</a>}
+                  </div>
                 </div>
               </div>
             ))}
@@ -330,16 +368,24 @@ function App() {
                 <h3>Graduate Research Assistant</h3>
                 <span className="exp-date">2025 - Present</span>
               </div>
+              <p className="exp-org">School of Earth Sciences & BuckAI Observatory, The Ohio State University</p>
+              <p className="exp-detail">Advisor: Prof. Joachim Moortgat. Funded by OSU Presidential Research Excellence Accelerator award ($50K). Co-developed open-source tools with Computer Science and Engineering.</p>
+            </div>
+            <div className="exp-item">
+              <div className="exp-header">
+                <h3>Graduate Research Assistant</h3>
+                <span className="exp-date">2023 - 2024</span>
+              </div>
               <p className="exp-org">Division of Geodetic Science, The Ohio State University</p>
-              <p className="exp-detail">Advisor: Prof. Joachim Moortgat. Research funded by OSU Presidential Research Excellence seed grant.</p>
+              <p className="exp-detail">Early-stage PhD research on satellite-derived bathymetry and cloud removal algorithms.</p>
             </div>
             <div className="exp-item">
               <div className="exp-header">
                 <h3>Graduate Teaching Assistant</h3>
                 <span className="exp-date">2024 - 2025</span>
               </div>
-              <p className="exp-org">Division of Geodetic Science, The Ohio State University</p>
-              <p className="exp-detail">Courses: EEOB 2911 The Climate Crisis (Autumn 2024), Earth Science Lab (Spring & Summer 2025)</p>
+              <p className="exp-org">The Ohio State University</p>
+              <p className="exp-detail">EEOB 2911 The Climate Crisis (Autumn 2024); Earth Science Lab (Spring & Summer 2025)</p>
             </div>
             <div className="exp-item">
               <div className="exp-header">
@@ -397,6 +443,11 @@ function App() {
         <section id="memberships">
           <h2 className="section-title">Professional Memberships</h2>
           <div className="memberships-list">
+            <div className="membership-item">
+              <strong>BuckAI Observatory, OSU</strong>
+              <span className="membership-detail">First PhD student affiliated with the center</span>
+              <span className="membership-period">2025 - present</span>
+            </div>
             <div className="membership-item">
               <strong>American Geophysical Union (AGU)</strong>
               <span className="membership-period">2024 - present</span>
@@ -475,7 +526,15 @@ function App() {
               </a>
               <a href="https://www.youtube.com/watch?v=BqAkyLukwXI" target="_blank" rel="noopener noreferrer" className="contact-link">
                 <span className="contact-icon">&#127909;</span>
-                <span>YouTube Interview</span>
+                <span>AGU TV Interview</span>
+              </a>
+              <a href="https://www.linkedin.com/in/hsiao-jou-hsu/" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <span className="contact-icon">&#128101;</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://orcid.org/0009-0008-5863-3229" target="_blank" rel="noopener noreferrer" className="contact-link">
+                <span className="contact-icon">&#128196;</span>
+                <span>ORCID</span>
               </a>
             </div>
           </div>
