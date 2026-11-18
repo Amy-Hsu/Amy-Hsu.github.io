@@ -12,6 +12,7 @@ import type { Lang } from './i18n'
 
 const INTL_FRIENDSHIPS_URL =
   'https://activities.osu.edu/involvement/student-organizations/find-a-student-org/?campus=Columbus&searchType=all&page=1&id=8cf4262a-9b55-4b30-aa4f-b1620924d645'
+const DL_BATHY_URL = 'https://github.com/buckai-observatory/DL_bathy'
 const CLOUDPEEL_URL =
   'https://buckai-observatory.org/Automated-Cloud-Removal-and-Seamless-Satellite-Image-Mosaicking-Pipeline/cloudpeel/'
 
@@ -1052,7 +1053,11 @@ function App() {
                   }{' '}
                   <strong>physics-informed and explainable AI</strong>
                   {' methods for '}
-                  <strong>satellite-derived shallow-water bathymetry</strong>
+                  <strong>
+                    <a href={DL_BATHY_URL} target="_blank" rel="noopener noreferrer">
+                      satellite-derived shallow-water bathymetry
+                    </a>
+                  </strong>
                   {
                     ' and coastal remote sensing, integrating machine learning, multispectral satellite imagery, airborne LiDAR, and physical models of underwater light propagation to improve the transferability, interpretability, and reliability of bathymetric mapping across diverse coastal environments.'
                   }
@@ -1097,7 +1102,11 @@ function App() {
               </>
             ) : (
               <>
-                <p className="hero-bio">{t('hero.bio1', lang)}</p>
+                <p className="hero-bio">
+                  {t('hero.bio1', lang).split('衛星遙測淺水測深')[0]}
+                  <a href={DL_BATHY_URL} target="_blank" rel="noopener noreferrer">衛星遙測淺水測深</a>
+                  {t('hero.bio1', lang).split('衛星遙測淺水測深')[1]}
+                </p>
                 <p className="hero-bio">
                   {t('hero.bio2', lang).split('開源地球觀測工具')[0]}
                   <a href={CLOUDPEEL_URL} target="_blank" rel="noopener noreferrer">
