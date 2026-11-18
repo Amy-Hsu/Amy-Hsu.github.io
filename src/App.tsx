@@ -1290,6 +1290,10 @@ function App() {
                     'Seamlines align with natural landscape features',
                   ],
                   tags: ['FORMOSAT-5', 'SPOT 6/7', 'Pléiades', 'Automation'],
+                  link: {
+                    href: 'https://buckai-observatory.org/Automated-Cloud-Removal-and-Seamless-Satellite-Image-Mosaicking-Pipeline/cloudpeel/',
+                    text: { en: 'Try it live: CloudPeel explorer →', zh: '線上體驗：CloudPeel 去雲鑲嵌瀏覽器 →' },
+                  },
                 },
               ].map((topic, i) => (
                 <FadeIn key={i} delay={i * 120}>
@@ -1311,6 +1315,16 @@ function App() {
                         </span>
                       ))}
                     </div>
+                    {topic.link && (
+                      <a
+                        href={topic.link.href}
+                        className="pub-code-link research-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {topic.link.text[lang]}
+                      </a>
+                    )}
                   </div>
                 </FadeIn>
               ))}

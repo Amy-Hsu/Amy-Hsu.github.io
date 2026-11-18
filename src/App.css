@@ -907,6 +907,11 @@ section {
   background: var(--primary);
   color: #fff !important;
 }
+.research-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
 .scholar-link {
   margin-top: 2rem;
 }
