@@ -1139,7 +1139,7 @@ function App() {
               <span className="metric-label">{t('metric.presentations', lang)}</span>
             </div>
             <div className="metric-item">
-              <span className="metric-value">177</span>
+              <span className="metric-value">186</span>
               <span className="metric-label">{t('metric.citations', lang)}</span>
             </div>
             <div className="metric-item">

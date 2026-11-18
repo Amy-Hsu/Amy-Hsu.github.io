@@ -154,7 +154,7 @@ function ChattyCreature({ className, flipped, children }: CreatureProps) {
 const LINK_MESSAGES: Record<string, string[]> = {
   publications: [
     "Check out Amy's publications!",
-    '177 citations and counting!',
+    '186 citations and counting!',
     'Read her papers!',
     'Want to see some science?',
     'Peer-reviewed and everything!',
