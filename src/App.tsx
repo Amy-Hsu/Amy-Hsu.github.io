@@ -223,6 +223,12 @@ function App() {
   ]
   const awards = [
     {
+      name: 'Presidential Fellowship',
+      detail:
+        'Graduate School, The Ohio State University; one year of full support for dissertation research',
+      year: '2026',
+    },
+    {
       name: 'Michael Johnson Graduate Student Award',
       detail: 'Outstanding PhD candidate starting research, School of Earth Sciences, OSU',
       year: '2026',
@@ -718,6 +724,15 @@ function App() {
             <h2>Financial Support</h2>
             <div className="rcv-entry">
               <div className="rcv-entry-header">
+                <strong>Presidential Fellowship, Graduate School, OSU</strong>
+                <span className="rcv-date">2027</span>
+              </div>
+              <p className="rcv-sub">
+                One year of full support for dissertation research, starting Spring 2027.
+              </p>
+            </div>
+            <div className="rcv-entry">
+              <div className="rcv-entry-header">
                 <span>Graduate Research Assistantship, School of Earth Sciences, OSU</span>
                 <span className="rcv-date">2023 - 2024; 2025 - present</span>
               </div>
@@ -1164,6 +1179,16 @@ function App() {
                     bathymetry
                   </em>
                   .
+                </p>
+              </div>
+              <div className="news-item">
+                <span className="news-date">Nov 2026</span>
+                <p>
+                  {'Awarded the '}
+                  <strong>Presidential Fellowship</strong>
+                  {
+                    ' by the Graduate School at The Ohio State University: one year of full support for dissertation research, starting Spring 2027.'
+                  }
                 </p>
               </div>
               <div className="news-item">
