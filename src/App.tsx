@@ -10,6 +10,8 @@ import Guestbook from './Guestbook'
 import { t } from './i18n'
 import type { Lang } from './i18n'
 
+const INTL_FRIENDSHIPS_URL =
+  'https://activities.osu.edu/involvement/student-organizations/find-a-student-org/?campus=Columbus&searchType=all&page=1&id=8cf4262a-9b55-4b30-aa4f-b1620924d645'
 const CLOUDPEEL_URL =
   'https://buckai-observatory.org/Automated-Cloud-Removal-and-Seamless-Satellite-Image-Mosaicking-Pipeline/cloudpeel/'
 
@@ -792,7 +794,7 @@ function App() {
             <div className="rcv-entry">
               <div className="rcv-entry-header">
                 <span>
-                  <strong>Treasurer</strong>, International Friendships (registered Ohio State
+                  <strong>Treasurer</strong>, <a href={INTL_FRIENDSHIPS_URL} target="_blank" rel="noopener noreferrer">International Friendships</a> (registered Ohio State
                   student organization serving international students and scholars): manage budgets,
                   expenses, reimbursements, and funding allocations; help plan community events
                   (welcome party, ice cream social, Lunar New Year celebration)
@@ -1085,7 +1087,11 @@ function App() {
                   <strong>BuckAI Observatory</strong>
                   {' at OSU and serve as '}
                   <strong>Treasurer</strong>
-                  {' of '} <strong>International Friendships</strong>, a student organization
+                  {' of '} 
+                  <strong>
+                    <a href={INTL_FRIENDSHIPS_URL} target="_blank" rel="noopener noreferrer">International Friendships</a>
+                  </strong>
+                  , a student organization
                   supporting international students and scholars.
                 </p>
               </>
@@ -1099,7 +1105,11 @@ function App() {
                   </a>
                   {t('hero.bio2', lang).split('開源地球觀測工具')[1]}
                 </p>
-                <p className="hero-bio">{t('hero.bio3', lang)}</p>
+                <p className="hero-bio">
+                  {t('hero.bio3', lang).split('International Friendships')[0]}
+                  <a href={INTL_FRIENDSHIPS_URL} target="_blank" rel="noopener noreferrer">International Friendships</a>
+                  {t('hero.bio3', lang).split('International Friendships')[1]}
+                </p>
               </>
             )}
           </div>
@@ -1215,7 +1225,10 @@ function App() {
               {' on AI in Earth and environmental sciences. Amy also serves as '}
               <strong>Treasurer</strong>
               {' of '}
-              <strong>International Friendships</strong>, a registered Ohio State student
+              <strong>
+                <a href={INTL_FRIENDSHIPS_URL} target="_blank" rel="noopener noreferrer">International Friendships</a>
+              </strong>
+              , a registered Ohio State student
               organization serving international students and scholars.
             </p>
             <div className="media-video">
