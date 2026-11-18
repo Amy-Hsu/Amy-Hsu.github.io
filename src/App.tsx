@@ -10,6 +10,9 @@ import Guestbook from './Guestbook'
 import { t } from './i18n'
 import type { Lang } from './i18n'
 
+const CLOUDPEEL_URL =
+  'https://buckai-observatory.org/Automated-Cloud-Removal-and-Seamless-Satellite-Image-Mosaicking-Pipeline/cloudpeel/'
+
 function App() {
   const [darkMode, setDarkMode] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -1058,7 +1061,11 @@ function App() {
                   {
                     ', uncertainty quantification for geophysical inverse problems, multi-temporal satellite data fusion, bathymetric change detection, '
                   }
-                  <strong>open-source Earth observation tools</strong>
+                  <strong>
+                    <a href={CLOUDPEEL_URL} target="_blank" rel="noopener noreferrer">
+                      open-source Earth observation tools
+                    </a>
+                  </strong>
                   {', as well as '}
                   <strong>landslide mapping</strong>
                   {', '}
@@ -1085,7 +1092,13 @@ function App() {
             ) : (
               <>
                 <p className="hero-bio">{t('hero.bio1', lang)}</p>
-                <p className="hero-bio">{t('hero.bio2', lang)}</p>
+                <p className="hero-bio">
+                  {t('hero.bio2', lang).split('開源地球觀測工具')[0]}
+                  <a href={CLOUDPEEL_URL} target="_blank" rel="noopener noreferrer">
+                    開源地球觀測工具
+                  </a>
+                  {t('hero.bio2', lang).split('開源地球觀測工具')[1]}
+                </p>
                 <p className="hero-bio">{t('hero.bio3', lang)}</p>
               </>
             )}
@@ -1291,7 +1304,7 @@ function App() {
                   ],
                   tags: ['FORMOSAT-5', 'SPOT 6/7', 'Pléiades', 'Automation'],
                   link: {
-                    href: 'https://buckai-observatory.org/Automated-Cloud-Removal-and-Seamless-Satellite-Image-Mosaicking-Pipeline/cloudpeel/',
+                    href: CLOUDPEEL_URL,
                     text: { en: 'Try it live: CloudPeel explorer →', zh: '線上體驗：CloudPeel 去雲鑲嵌瀏覽器 →' },
                   },
                 },

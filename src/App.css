@@ -293,6 +293,10 @@ section {
 .hero-bio strong {
   color: var(--text);
 }
+.hero-bio a {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
 .hero-links {
   display: flex;
   flex-wrap: wrap;
